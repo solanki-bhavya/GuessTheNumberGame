@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/welcome"
+        android:textColor="#5022CD"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/newgame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guess"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decimalnumber" />
+
+    <Button
+        android:id="@+id/guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:text="@string/check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/newgame"
+        app:layout_constraintTop_toBottomOf="@+id/decimalnumber" />
+
+    <EditText
+        android:id="@+id/decimalnumber"
+        android:layout_width="311dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/enteryourguess"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/newgame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textColor="#FF2323"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
